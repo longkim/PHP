@@ -18,7 +18,8 @@ $("button")
         });
     });
 
-$(function() {
+$(function() 
+  {
     $( "#home_dialog" ).dialog({
       autoOpen: false,
       width:500,
