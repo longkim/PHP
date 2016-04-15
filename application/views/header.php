@@ -11,11 +11,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<title><?php echo $title;?></title>
 </head>
 <body>
-<?php if ($title == "IEHealth Login Page" or $title == "Add New Priority Page"){} else {?>
+<?php if ($title == "Login Page" or $title == "Add New Priority Page"){} else {?>
 	<div id="menu">
 		<div class="menu_logo">
 			<a href="<?php echo base_url().'welcome'; ?>">
-				<img src="<?php echo asset_url().'/img/logo.png'?>"/>
+				<img width="130px"src="<?php echo asset_url().'/img/logo.png'?>"/>
 			</a>
 		</div>
 		<div class="nav_menu">
@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<ul>
 				<li><?php echo anchor('admin/logout', 'Logout', 'title="Logout"');?></li>
 				<li><?php echo anchor('report', 'Report Generating', 'title="Report"');?></li>
-				<li><?php echo anchor('registration', 'Register New User', 'title="Register"');?></li>
+				<!-- <li><?php echo anchor('registration', 'Register New User', 'title="Register"');?></li> -->
 				<li><?php echo anchor('welcome','Home Page','class="current"')?></li>
 				<li><?php echo anchor('dashboard','Dash Board','title="Dash Board"')?></li>
 			</ul>

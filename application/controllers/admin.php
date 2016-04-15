@@ -11,7 +11,7 @@ class Admin extends CI_Controller {
 	public function index()
 	{	
 //		$this->load->library('form_validation');
-		$data['title'] = "IEHealth Login Page";
+		$data['title'] = "Login Page";
 		$this->form_validation->set_rules('email_address','Email Address','required|valid_email');
 		$this->form_validation->set_rules('password','Password','required');
 		
@@ -99,7 +99,7 @@ class Admin extends CI_Controller {
 		$this->session->unset_userdata('firstname');
 		$this->session->unset_userdata('lastname');
 		$this->session->sess_destroy();
-		$data['title'] = "IEHealth Login Page";
+		$data['title'] = "Login Page";
 		$this->load->view('header', $data);
 		$this->load->view('login_view');
 	

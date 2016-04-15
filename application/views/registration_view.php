@@ -1,4 +1,4 @@
-<div id="login">
+<!-- <div id="login">
 <h1 class="reg">Registration</h1>
 <?php $attributes = array('class' => 'loginform', 'id' => 'loginform');?>
 <?php echo form_open('admin/registration',$attributes); ?>
@@ -34,4 +34,4 @@
 <?php echo form_close();?>
 </div>
 </body>
-</html>
+</html> -->

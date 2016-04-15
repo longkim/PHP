@@ -1,11 +1,11 @@
 <!--<div>-->
 <!--<img id="dialog" style="width:150px;height:150px;border:5px dashed #696969" width="50px" src="<?php echo asset_url().'img/plus.png'?>"/>-->
-<!--</div>-->
+<!--</div>
 <div id="home_dialog"></div>
 
 <div id="createEntry">
    <button>Create new item</button>
-</div>
+</div>-->
 <script>
 
 $("button")
