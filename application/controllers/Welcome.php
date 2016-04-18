@@ -31,7 +31,6 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message');
 	}
 	
-	
 	function write_csv(){
 		$data = $this->input->post('data');
 		$filename = $this->input->post('filename');
@@ -40,4 +39,5 @@ class Welcome extends CI_Controller {
 		file_put_contents($path, $data);
 		echo "The file has been written to ".$path;
 	}
+
 }

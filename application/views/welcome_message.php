@@ -59,7 +59,7 @@ $(".exportlow").bind('click', function (e) {
     	    {filename:filename,data:data        } ,
     	    function(response){
         alert(response);
-      
+  
 });
 })
 
