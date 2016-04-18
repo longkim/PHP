@@ -26,10 +26,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<?php }?>
 			<ul>
 				<li><?php echo anchor('admin/logout', 'Logout', 'title="Logout"');?></li>
-				<li><?php echo anchor('report', 'Report Generating', 'title="Report"');?></li>
+				<li><?php echo anchor('backup', 'Back up', 'title="Backup"');?></li>
 				<!-- <li><?php echo anchor('registration', 'Register New User', 'title="Register"');?></li> -->
-				<li><?php echo anchor('welcome','Home Page','class="current"')?></li>
-				<li><?php echo anchor('dashboard','Dash Board','title="Dash Board"')?></li>
+				<li><?php echo anchor('sales','Sales','title="Sales"')?></li>
+				<li><?php echo anchor('welcome','Product','title="Product Page"')?></li>
 			</ul>
 		</div>
 	</div>
