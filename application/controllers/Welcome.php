@@ -27,9 +27,7 @@ class Welcome extends CI_Controller {
 		$data['result'] = $res->result();
 		$data['low'] = $low->result();
 		$data['title'] = "Home Page";
-		$this->load->view('header',$data);
-		$this->load->view('welcome_message');
-	}
+		}
 	
 	function write_csv(){
 		$data = $this->input->post('data');
