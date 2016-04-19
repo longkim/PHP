@@ -1,15 +1,18 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Welcome extends CI_Controller 
+{
 	
-	function __contruct(){
+	function __contruct()
+	{
 		parent::__contruct();		
 	}
 
 	public function index()
 	{
 		$session_user = $this->session->userdata('username');
+		
 		if(!isset($session_user) || ($session_user==''))
 		{
 			$this->session->set_flashdata('msg',"Please login to continue");
@@ -31,7 +34,8 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message');
 	}
 	
-	function write_csv(){
+	function write_csv()
+	{
 		$data = $this->input->post('data');
 		$filename = $this->input->post('filename');
 		$path =  FCPATH."assets"."\\".$filename.".csv";
