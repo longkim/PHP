@@ -1,4 +1,0 @@
-""s_id","p_id","customer_name","gender","address","amount","balance","shipping_status","payment_status","date"
-"1","1","Will","Male","123 John Street","120","0","pending","finished","2016-04-18 15:32:19"
-"2","2","Long","Male","89 address blv","100","20","shipped","finished","2016-04-18 15:32:19"
-"
