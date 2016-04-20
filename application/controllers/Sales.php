@@ -49,6 +49,10 @@ class Sales extends CI_Controller {
 		$data['shippingCSV'] = $shippingCSV;
 		//$data['lowCSV'] = $lowCSV;
 		
+		//$data['low'] = $low->result();
+		$data['title'] = "Home Page";
+		$this->load->view('header',$data);
+		$this->load->view('sales_view');
 	}
 	
 	
@@ -78,6 +82,8 @@ class Sales extends CI_Controller {
 		$data['outstanding'] = $outstanding->num_rows();
 		$data['payment'] = $payment->num_rows();
 		$data['shipping'] = $shipping->num_rows();
-
+		
+		$this->load->view('header',$data);
+		$this->load->view("analysis_view");
 	}
 }

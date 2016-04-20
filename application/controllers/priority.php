@@ -15,7 +15,9 @@ class priority extends CI_Controller {
 			$this->session->set_flashdata('msg',"Please login to continue");
 			redirect('admin');
 		}
-
+		$data['title'] = "Add New Priority Page";
+		$this->load->view('header',$data);
+		$this->load->view('add_new_priority_view');
 	}
 
 	public function create()
@@ -51,12 +53,13 @@ class priority extends CI_Controller {
 				
 			}else{
 				$data['title'] = "Register page";
-	
+				$this->load->view('header',$data);
+				$this->load->view('registration_view');
 			}
 		}
 		
 		$data['title'] = "Add New Priority Page";
 		$this->load->view('header',$data);
-
+		$this->load->view('add_new_priority_view');
 	}
 }
