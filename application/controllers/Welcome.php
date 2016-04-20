@@ -15,8 +15,7 @@ class Welcome extends CI_Controller {
 			$this->session->set_flashdata('msg',"Please login to continue");
 			redirect('admin');
 		}
-		
-		
+		  
 		$this->load->model('Product_model');
 		$res = $this->Product_model->getAllProduct();
 		$resCSV = $this->Product_model->getAllProductInCSV();
