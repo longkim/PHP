@@ -19,7 +19,7 @@ class Welcome extends CI_Controller
 			redirect('admin');
 		}
 		
-		
+		             
 		$this->load->model('Product_model');
 		$res = $this->Product_model->getAllProduct();
 		$resCSV = $this->Product_model->getAllProductInCSV();
