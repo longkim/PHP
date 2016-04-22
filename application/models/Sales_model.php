@@ -90,7 +90,7 @@ class Sales_model extends CI_Model {
 	function backup($tablename){
 		$this->load->dbutil();
 		$prefs = array(
-                'tables'      => array($tablename),  // Array of tables to backup.
+                'tables'      => array($tablename),  // 
                 'ignore'      => array(),           // List of tables to omit from the backup
                 'format'      => 'txt',             // gzip, zip, txt
                 'filename'    => $tablename.'.sql',    // File name - NEEDED ONLY WITH ZIP FILES
