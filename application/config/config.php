@@ -505,6 +505,7 @@ $config['rewrite_short_tags'] = FALSE;
 | Reverse Proxy IPs
 |--------------------------------------------------------------------------
 |
+| If your answer is behind a reserve proxy, you must whitelist the proxy
 | IP addresses from which CodeIgniter should trust headers such as
 | HTTP_X_FORWARDED_FOR and HTTP_CLIENT_IP in order to properly identify
 | the visitor's IP address.
