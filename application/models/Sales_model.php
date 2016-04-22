@@ -98,7 +98,7 @@ class Sales_model extends CI_Model {
                 'add_insert'  => TRUE,              // Whether to add INSERT data to backup file
                 'newline'     => "\n"               // Newline character used in backup file
               );
-		return $this->dbutil->backup($prefs);
+		
 	}
 	
 	
