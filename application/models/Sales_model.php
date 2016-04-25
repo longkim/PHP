@@ -1,19 +1,23 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Sales_model extends CI_Model {
+class Sales_model extends CI_Model 
+{
 
-	function __construct(){
+	function __construct()
+	{
 		parent::__construct();
 	}
 
-	function getAllSales(){
+	function getAllSales()
+	{
         return $this->db->get('p_sales');
 		
 	
 	}
 	
-	function getAllSalesInCSV(){
+	function getAllSalesInCSV()
+	{
 		$this->load->dbutil();
 
 		$q = $this->db->query("SELECT * FROM p_sales");
@@ -22,11 +26,13 @@ class Sales_model extends CI_Model {
 	}
 	
 	
-	function getMaleCustomer(){
+	function getMaleCustomer()
+	{
 		return $this->db->query("SELECT * FROM p_sales WHERE gender='Male'");
 	}
 	
-	function getMaleCustomerInCSV(){
+	function getMaleCustomerInCSV()
+	{
 		$this->load->dbutil();
 
 		$q = $this->db->query("SELECT * FROM p_sales WHERE gender='Male'");
@@ -34,11 +40,13 @@ class Sales_model extends CI_Model {
 		return $this->dbutil->csv_from_result($q);
 	}
 	
-	function getFemaleCustomer(){
+	function getFemaleCustomer()
+	{
 		return $this->db->query("SELECT * FROM p_sales WHERE gender='Female'");
 	}
 	
-	function getFemaleCustomerInCSV(){
+	function getFemaleCustomerInCSV()
+	{
 		$this->load->dbutil();
 
 		$q = $this->db->query("SELECT * FROM p_sales WHERE gender='Female'");
@@ -46,11 +54,13 @@ class Sales_model extends CI_Model {
 		return $this->dbutil->csv_from_result($q);
 	}
 	
-	function getOutstandingSales(){
+	function getOutstandingSales()
+	{
 		return $this->db->query("SELECT * FROM p_sales WHERE balance !=0");		
 	}
 	
-	function getOutstandingSalesInCSV(){
+	function getOutstandingSalesInCSV()
+	{
 		$this->load->dbutil();
 
 		$q = $this->db->query("SELECT * FROM p_sales WHERE balance !=0");
@@ -58,11 +68,13 @@ class Sales_model extends CI_Model {
 		return $this->dbutil->csv_from_result($q);
 	}
 	
-	function getPendingPayment(){
+	function getPendingPayment()
+	{
 		return $this->db->query("SELECT * FROM p_sales WHERE payment_status = 'pending'");		
 	}
 	
-	function getPendingPaymentInCSV(){
+	function getPendingPaymentInCSV()
+	{
 		$this->load->dbutil();
 
 		$q = $this->db->query("SELECT * FROM p_sales WHERE payment_status = 'pending'");
@@ -70,11 +82,13 @@ class Sales_model extends CI_Model {
 		return $this->dbutil->csv_from_result($q);
 	}
 	
-	function getPendingShipping(){
+	function getPendingShipping()
+	{
 		return $this->db->query("SELECT * FROM p_sales WHERE shipping_status = 'pending'");	
 	}
 	
-	function getPendingShippingInCSV(){
+	function getPendingShippingInCSV()
+	{
 		$this->load->dbutil();
 
 		$q = $this->db->query("SELECT * FROM p_sales WHERE shipping_status = 'pending'");
@@ -83,11 +97,13 @@ class Sales_model extends CI_Model {
 	}
 	
 	
-	function listAllTable(){
+	function listAllTable()
+	{
 		return $this->db->list_tables();
 	}
 	
-	function backup($tablename){
+	function backup($tablename)
+	{
 		$this->load->dbutil();
 		$prefs = array(
                 'tables'      => array($tablename),  // Array of tables to backup.
