@@ -1,9 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Welcome extends CI_Controller 
+{
 	
-	function __contruct(){
+	function __contruct()
+	{
 		parent::__contruct();		
 	}
 
@@ -31,7 +33,8 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message');
 	}
 	
-	function write_csv(){
+	function write_csv()
+	{
 		$data = $this->input->post('data');
 		$filename = $this->input->post('filename');
 		$path =  FCPATH."assets"."\\".$filename.".csv";
