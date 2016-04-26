@@ -260,6 +260,21 @@ $(".exportshipping").bind('click', function (e) {
 })
 
 
+$(".exportpayment").bind('click', function (e) {
+	var filename = "All_Pending_Payment_Sales_"+"<?php echo date('d_F_Y_H_i_s');?>";
+	var data = '<?php echo json_encode($paymentCSV); ?>';
+    $.post('<?php echo base_url(); ?>welcome/write_csv',
+    	    {filename:filename,data:data        } ,
+    	    function(response){
+        alert(response);
+      
+});
+})
+
+$(".pdf").bind('click', function (e) {
+	
+	location.href = "<?php echo base_url().'sales/analysis';?>";
+});
 
 
 </script>
