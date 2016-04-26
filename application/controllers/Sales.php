@@ -64,6 +64,7 @@ class Sales extends CI_Controller {
 		// Write the contents back to the file
 		file_put_contents($path, $data);
 		echo "The file has been written to ".$path;
+		
 	}
 	
 	function analysis()
@@ -73,11 +74,13 @@ class Sales extends CI_Controller {
 		$this->load->helper('pdf_helper');
 		
 		
+		
 		$male = $this->Sales_model->getMaleCustomer();
 		$female = $this->Sales_model->getFemaleCustomer();
 		$outstanding = $this->Sales_model->getOutstandingSales();
 		$payment = $this->Sales_model->getPendingPayment();;
 		$shipping = $this->Sales_model->getPendingShipping();
+		
 		
 		$data['male'] = $male->num_rows();
 		$data['female'] = $female->num_rows();
@@ -85,7 +88,10 @@ class Sales extends CI_Controller {
 		$data['payment'] = $payment->num_rows();
 		$data['shipping'] = $shipping->num_rows();
 		
+		
 		$this->load->view('header',$data);
 		$this->load->view("analysis_view");
+		
+		
 	}
 }
