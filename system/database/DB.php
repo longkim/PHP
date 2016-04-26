@@ -35,7 +35,8 @@
  * @since	Version 1.0.0
  * @filesource
  */
-defined('BASEPATH') OR exit('No direct script access allowed');
+
+ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Initialize the database
@@ -105,6 +106,7 @@ function &DB($params = '', $query_builder_override = NULL)
 	}
 	elseif (is_string($params))
 	{
+		
 		/**
 		 * Parse the URL from the DSN string
 		 * Database settings can be passed as discreet
@@ -156,6 +158,7 @@ function &DB($params = '', $query_builder_override = NULL)
 	{
 		$query_builder = $query_builder_override;
 	}
+	
 	// Backwards compatibility work-around for keeping the
 	// $active_record config variable working. Should be
 	// removed in v3.1
@@ -215,4 +218,5 @@ function &DB($params = '', $query_builder_override = NULL)
 
 	$DB->initialize();
 	return $DB;
+	
 }
