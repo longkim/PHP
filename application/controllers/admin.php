@@ -1,9 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin extends CI_Controller {
+class Admin extends CI_Controller 
+{
 
-	public function __construct() {        
+	public function __construct() 
+	{        
    		parent::__construct();
    		$this->load->model('admin_model');
 	}
@@ -15,7 +17,8 @@ class Admin extends CI_Controller {
 		$this->form_validation->set_rules('email_address','Email Address','required|valid_email');
 		$this->form_validation->set_rules('password','Password','required');
 		
-		if($this->form_validation->run() != false){
+		if($this->form_validation->run() != false)
+		{
 			$res = $this->admin_model->verify_user($this->input->post('email_address'),$this->input->post('password'));
 //			print_r($res->u_name);die();
 			if ($res != null){
@@ -36,7 +39,8 @@ class Admin extends CI_Controller {
 	}
 	
 	
-	public function registration(){
+	public function registration()
+	{
 	
 	 	$this->form_validation->set_rules('fname', 'First Name', 'trim|required|alpha|min_length[3]|max_length[30]|xss_clean');
         $this->form_validation->set_rules('lname', 'Last Name', 'trim|required|alpha|min_length[3]|max_length[30]|xss_clean');
