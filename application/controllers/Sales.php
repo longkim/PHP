@@ -56,7 +56,8 @@ class Sales extends CI_Controller {
 	}
 	
 	
-	function write_csv(){
+	function write_csv()
+	{
 		$data = $this->input->post('data');
 		$filename = $this->input->post('filename');
 		$path =  FCPATH."assets"."\\".$filename.".csv";
@@ -65,7 +66,8 @@ class Sales extends CI_Controller {
 		echo "The file has been written to ".$path;
 	}
 	
-	function analysis(){
+	function analysis()
+	{
 		$data['title'] = "Analysis Page";
 		$this->load->model('Sales_model');
 		$this->load->helper('pdf_helper');
