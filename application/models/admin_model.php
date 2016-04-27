@@ -1,32 +1,38 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin_model extends CI_Model {
+class Admin_model extends CI_Model 
+{
 
-	function __construct(){
+	function __construct()
+	{
 		parent::__construct();
 	}
 
-	public function verify_user($email,$password){
+	public function verify_user($email,$password)
+	{
 		$q = $this->db
 		->where('u_email',$email)
 		->where('u_password',sha1($password))
 		->limit(1)
 		->get('ie_user');
 
-		if($q->num_rows() > 0 ){
+		if($q->num_rows() > 0 )
+		{
 			return $q->row();
 		}
 		//		echo "asas1111";die();
 		return false;
 	}
 
-	public function insert_user($data){
+	public function insert_user($data)
+	{
 		return $this->db->insert('ie_user', $data);
 	}
 
 
-	public function send_reset_password_email($email){
+	public function send_reset_password_email($email)
+	{
 		
 		$this->load->library('email');
 	// get config data
@@ -43,10 +49,8 @@ class Admin_model extends CI_Model {
 		$this->email->send();
 		//to debug we can use print_debugger()
 		echo $this->email->print_debugger();
-}
-
-
 	}
+}
 
 
 

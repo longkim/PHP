@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+
 class Product_model extends CI_Model 
 {
 
@@ -8,6 +9,7 @@ class Product_model extends CI_Model
 	{
 		parent::__construct();
 	}
+	
 	//get all stock product
 	function getAllProduct()
 	{
@@ -35,14 +37,14 @@ class Product_model extends CI_Model
 
 		return $this->dbutil->csv_from_result($q);
 	}
-	
+	   
 	
 	//get low stock product	
 	function getLowStockProduct()
 	{
 		return $this->db->query('SELECT * FROM p_products WHERE quantity < 10');
 	
-	}
+	} 
 
-
+    
 }
