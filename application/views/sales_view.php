@@ -33,6 +33,7 @@
 	</table>
 	<button style="margin-top:10px" class="exportall">Export to CSV</button>
 </div>
+
 <!--Outstanding Sales-->
 <div style="float:left;margin:20px">
 	<h1 style="clear:left">All Outstanding Sales</h1>
@@ -66,6 +67,7 @@
 	</table>
 	<button style="margin-top:10px" class="exportoutstanding">Export to CSV</button>
 </div>
+
 <!--Male Section -->
 <div style="float:left;margin:20px">
 	<h1 style="clear:left">All Male Customers Sales</h1>
@@ -99,6 +101,7 @@
 	</table>
 	<button style="margin-top:10px" class="exportmale">Export to CSV</button>
 </div>
+
 <!--Female Section -->
 <div style="float:left;margin:20px">
 	<h1 style="clear:left">All Female Customers Sales</h1>
@@ -132,6 +135,7 @@
 	</table>
 	<button style="margin-top:10px" class="exportfemale">Export to CSV</button>
 </div>
+
 <!--Payment Section -->
 <div style="float:left;margin:20px">
 	<h1 style="clear:left">All Pending Payment Sales</h1>
@@ -165,6 +169,7 @@
 	</table>
 	<button style="margin-top:10px" class="exportpayment">Export to CSV</button>
 </div>
+
 <!--Shipping Section -->
 <div style="float:left;margin:20px">
 	<h1 style="clear:left">All Pending Shipping Sales</h1>
