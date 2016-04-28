@@ -1,9 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Backup extends CI_Controller {
+class Backup extends CI_Controller 
+{
 	
-	function __contruct(){
+	function __contruct()
+	{
 		parent::__contruct();		
 	}
 	
@@ -16,7 +18,8 @@ class Backup extends CI_Controller {
 		$this->load->view("backup_view");
 	}
 	
-	function dumptable(){
+	function dumptable()
+	{
 		$tablename = $this->input->post('tablename');
 		$this->load->model('Sales_model');
 		$backup = $this->Sales_model->backup($tablename);
