@@ -1,7 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class priority extends CI_Controller {
+class priority extends CI_Controller 
+{
 	
 	function __contruct(){
 		parent::__contruct();		
@@ -35,7 +36,8 @@ class priority extends CI_Controller {
         $this->form_validation->set_rules('pdesc', 'Description', 'trim|required|alpha|min_length[3]|xss_clean');
        
         
-        if( $this->form_validation->run() != false){
+        if( $this->form_validation->run() != false)
+		{
         	
         	
         	//insert the user registration details into database
