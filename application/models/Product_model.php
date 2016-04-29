@@ -4,21 +4,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Product_model extends CI_Model 
 {
 
-	function __construct()
-	{
+	function __construct(){
 		parent::__construct();
 	}
 	//get all products
-	function getAllProduct()
-	{
+	function getAllProduct(){
         return $this->db->get('p_products');
 		
 	
 	}
 	
 	//get all stocked products
-	function getAllProductInCSV()
-	{
+	function getAllProductInCSV(){
 		$this->load->dbutil();
 
 		$q = $this->db->query("SELECT * FROM p_products");
