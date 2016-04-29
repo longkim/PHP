@@ -15,6 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | -------------------------------------------------------------------
 |
 |	['dsn']      The full DSN string describe a connection to the database.
+
 |	['hostname'] The hostname of your database server.
 |	['username'] The username used to connect to the database
 |	['password'] The password used to connect to the database
@@ -64,6 +65,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | 				However, this may cause high memory usage, especially if you run
 | 				a lot of SQL queries ... disable this to avoid that problem.
 |
+
 | The $active_group variable lets you choose which connection group to
 | make active.  By default there is only one group (the 'default' group).
 |
