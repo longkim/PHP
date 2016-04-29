@@ -9,16 +9,14 @@ class Product_model extends CI_Model
 		parent::__construct();
 	}
 	//get all products
-	function getAllProduct()
-	{
+	function getAllProduct(){
         return $this->db->get('p_products');
 		
 	
 	}
 	
 	//get all stocked products
-	function getAllProductInCSV()
-	{
+	function getAllProductInCSV(){
 		$this->load->dbutil();
 
 		$q = $this->db->query("SELECT * FROM p_products");
@@ -27,8 +25,7 @@ class Product_model extends CI_Model
 	}
 	
 	//get low stocked products in CSV
-	function getLowStockProductInCSV()
-	{
+	function getLowStockProductInCSV(){
 		$this->load->dbutil();
 
 		$q = $this->db->query("SELECT * FROM p_products WHERE quantity < 10");
