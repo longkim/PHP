@@ -1,16 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Backup extends CI_Controller 
-{
+class Backup extends CI_Controller {
 	
-	function __contruct()
-	{
+	function __contruct(){
 		parent::__contruct();		
 	}
 	
-	function index()
-	{
+	function index(){
 		$data['title'] = "Backup Database";
 		$this->load->model('Sales_model');
 		$table = $this->Sales_model->listAllTable();
