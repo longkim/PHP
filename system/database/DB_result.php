@@ -275,6 +275,7 @@ class CI_DB_result
 	 *
 	 * @return	array
 	 */
+	 
 	public function result_array()
 	{
 		if (count($this->result_array) > 0)
@@ -382,6 +383,7 @@ class CI_DB_result
 	 * @param	string	$type
 	 * @return	object
 	 */
+	 
 	public function custom_row_object($n, $type)
 	{
 		isset($this->custom_result_object[$type]) OR $this->custom_result_object($type);

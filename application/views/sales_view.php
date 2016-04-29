@@ -276,6 +276,7 @@ $(".exportpayment").bind('click', function (e) {
 });
 })
 
+
 $(".pdf").bind('click', function (e) {
 	
 	location.href = "<?php echo base_url().'sales/analysis';?>";
