@@ -46,7 +46,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @author		EllisLab Dev Team
  * @link		https://codeigniter.com/user_guide/database/
  */
-class CI_DB_mysqli_utility extends CI_DB_utility {
+class CI_DB_mysqli_utility extends CI_DB_utility 
+{
 
 	/**
 	 * List databases statement
