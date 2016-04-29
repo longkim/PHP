@@ -13,6 +13,7 @@
           ['Pending Shipping',     <?php echo $shipping;?>]
         ]);
 
+		
         var options = {
           title: '',
           backgroundColor : '#f1f1f1',
