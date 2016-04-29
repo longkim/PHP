@@ -1,9 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin extends CI_Controller {
+class Admin extends CI_Controller 
+{
 
-	public function __construct() {        
+	public function __construct() 
+	{        
    		parent::__construct();
    		$this->load->model('admin_model');
 	}
@@ -36,7 +38,8 @@ class Admin extends CI_Controller {
 	}
 	
 	
-	public function registration(){
+	public function registration()
+	{
 	
 	 	$this->form_validation->set_rules('fname', 'First Name', 'trim|required|alpha|min_length[3]|max_length[30]|xss_clean');
         $this->form_validation->set_rules('lname', 'Last Name', 'trim|required|alpha|min_length[3]|max_length[30]|xss_clean');
@@ -44,7 +47,8 @@ class Admin extends CI_Controller {
         $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[3]|max_length[30]|matches[cpassword]');
         $this->form_validation->set_rules('cpassword', 'Confirm Password', 'trim|required');
         
-        if( $this->form_validation->run() != false){
+        if( $this->form_validation->run() != false)
+		{
         	
         	
         	//insert the user registration details into database
@@ -76,13 +80,15 @@ class Admin extends CI_Controller {
 	}
 	
 	
-	public function reset_password(){
+	public function reset_password()
+	{
 	
 		$this->load->view('reset_password_view');
 	
 	}
 	
-	public function forget_password(){
+	public function forget_password()
+	{
 	
 		$this->form_validation->set_rules('email', 'Email ID', 'trim|required|valid_email');
 		 if( $this->form_validation->run() != false){
@@ -93,7 +99,8 @@ class Admin extends CI_Controller {
 	
 	
 	
-	public function logout(){
+	public function logout()
+	{
 		
 		$this->session->unset_userdata('username');
 		$this->session->unset_userdata('firstname');
