@@ -14,7 +14,8 @@ class Sales_model extends CI_Model
 	
 	}
 	
-	function getAllSalesInCSV(){
+	function getAllSalesInCSV()
+	{
 		$this->load->dbutil();
 
 		$q = $this->db->query("SELECT * FROM p_sales");
@@ -23,11 +24,13 @@ class Sales_model extends CI_Model
 	}
 	
 	
-	function getMaleCustomer(){
+	function getMaleCustomer()
+	{
 		return $this->db->query("SELECT * FROM p_sales WHERE gender='Male'");
 	}
 	
-	function getMaleCustomerInCSV(){
+	function getMaleCustomerInCSV()
+	{
 		$this->load->dbutil();
 
 		$q = $this->db->query("SELECT * FROM p_sales WHERE gender='Male'");
