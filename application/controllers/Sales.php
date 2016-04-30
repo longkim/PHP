@@ -4,13 +4,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Sales extends CI_Controller 
 {
 	
-	function __contruct()
-	{
+	function __contruct(){
 		parent::__contruct();		
 	}
 
-	public function index()
-	{
+	public function index(){
 		$session_user = $this->session->userdata('username');
 		if(!isset($session_user) || ($session_user==''))
 		{
@@ -58,8 +56,7 @@ class Sales extends CI_Controller
 	}
 	
 	
-	function write_csv()
-	{
+	function write_csv(){
 		$data = $this->input->post('data');
 		$filename = $this->input->post('filename');
 		$path =  FCPATH."assets"."\\".$filename.".csv";
