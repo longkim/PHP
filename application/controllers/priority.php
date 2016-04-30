@@ -4,9 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class priority extends CI_Controller 
 {
 	
-	function __contruct(){
+	function __contruct()
+	
+	{
 		parent::__contruct();		
 	}
+	
 	
 	public function index()
 	{
@@ -21,6 +24,7 @@ class priority extends CI_Controller
 		$this->load->view('add_new_priority_view');
 	}
 
+	
 	public function create()
 	{
 		$session_user = $this->session->userdata('username');
@@ -32,14 +36,17 @@ class priority extends CI_Controller
 		
 		
 		
+		
 	 	$this->form_validation->set_rules('pname', 'Priority Name', 'trim|required|alpha|min_length[3]|max_length[50]|xss_clean');
         $this->form_validation->set_rules('pdesc', 'Description', 'trim|required|alpha|min_length[3]|xss_clean');
        
         
+		
         if( $this->form_validation->run() != false)
 		{
         	
         	
+			
         	//insert the user registration details into database
             $data = array(
                 'p_name' => $this->input->post('pname'),
@@ -49,6 +56,7 @@ class priority extends CI_Controller
 
 			$res = $this->admin_model->insert_user($data);
 
+			
 			if ($res == true){
 				$this->session->set_flashdata('msg','Registeration done, please log in to continue');
 				redirect('admin');
@@ -60,8 +68,11 @@ class priority extends CI_Controller
 			}
 		}
 		
+		
 		$data['title'] = "Add New Priority Page";
 		$this->load->view('header',$data);
 		$this->load->view('add_new_priority_view');
+		
 	}
+	
 }
