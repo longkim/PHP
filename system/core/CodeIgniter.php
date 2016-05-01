@@ -275,6 +275,8 @@ if ( ! is_php('5.4'))
 		ini_set('php.internal_encoding', $charset);
 	}
 
+	
+	
 /*
  * ------------------------------------------------------
  *  Load compatibility features

@@ -173,6 +173,7 @@ class CI_Config {
 			}
 		}
 
+		
 		if ($loaded === TRUE)
 		{
 			return TRUE;
@@ -204,6 +205,7 @@ class CI_Config {
 		return isset($this->config[$index], $this->config[$index][$item]) ? $this->config[$index][$item] : NULL;
 	}
 
+	
 	// --------------------------------------------------------------------
 
 	/**
@@ -289,6 +291,7 @@ class CI_Config {
 		return $base_url.$this->item('index_page').$uri;
 	}
 
+	
 	// -------------------------------------------------------------
 
 	/**
