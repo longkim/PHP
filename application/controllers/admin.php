@@ -4,14 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Admin extends CI_Controller 
 {
 
-	public function __construct() 
-	{        
+	public function __construct() {        
    		parent::__construct();
    		$this->load->model('admin_model');
 	}
 	
-	public function index()
-	{	
+	public function index(){	
 //		$this->load->library('form_validation');
 		$data['title'] = "Login Page";
 		$this->form_validation->set_rules('email_address','Email Address','required|valid_email');
@@ -43,7 +41,6 @@ class Admin extends CI_Controller
 	
 	public function registration()
 	{
-	
 	 	$this->form_validation->set_rules('fname', 'First Name', 'trim|required|alpha|min_length[3]|max_length[30]|xss_clean');
         $this->form_validation->set_rules('lname', 'Last Name', 'trim|required|alpha|min_length[3]|max_length[30]|xss_clean');
         $this->form_validation->set_rules('email', 'Email ID', 'trim|required|valid_email|is_unique[ie_user.u_email]');
