@@ -47,8 +47,7 @@ class Admin extends CI_Controller
         $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[3]|max_length[30]|matches[cpassword]');
         $this->form_validation->set_rules('cpassword', 'Confirm Password', 'trim|required');
         
-        if( $this->form_validation->run() != false)
-		{
+        if( $this->form_validation->run() != false){
         	
         	
         	//insert the user registration details into database
@@ -62,8 +61,7 @@ class Admin extends CI_Controller
 
 			$res = $this->admin_model->insert_user($data);
 
-			if ($res == true)
-			{
+			if ($res == true){
 				$this->session->set_flashdata('msg','Registeration done, please log in to continue');
 				redirect('admin');
 				
@@ -81,6 +79,7 @@ class Admin extends CI_Controller
 		$this->load->view('registration_view');
 		
 	}
+	
 	
 	
 	public function reset_password()
@@ -113,6 +112,7 @@ class Admin extends CI_Controller
 		$data['title'] = "Login Page";
 		$this->load->view('header', $data);
 		$this->load->view('login_view');
+	
 	
 	}
 }
