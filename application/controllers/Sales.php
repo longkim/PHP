@@ -1,14 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Sales extends CI_Controller 
-{
+class Sales extends CI_Controller {
 	
-	function __contruct(){
+	function __contruct()
+	{
 		parent::__contruct();		
 	}
 
-	public function index(){
+	public function index()
+	    {
 		$session_user = $this->session->userdata('username');
 		if(!isset($session_user) || ($session_user==''))
 		{
@@ -34,12 +35,15 @@ class Sales extends CI_Controller
 		
 		//================ CSV ===================================
 		
+		
+		
 		$resCSV = $this->Sales_model->getAllSalesInCSV();
 		$maleCSV = $this->Sales_model->getMaleCustomerInCSV();
 		$femaleCSV = $this->Sales_model->getFemaleCustomerInCSV();
 		$outstandingCSV = $this->Sales_model->getOutstandingSalesInCSV();
 		$paymentCSV = $this->Sales_model->getPendingPaymentInCSV();;
 		$shippingCSV = $this->Sales_model->getPendingShippingInCSV();
+		
 		
 		$data['resCSV'] = $resCSV;
 		$data['maleCSV'] = $maleCSV;
@@ -50,6 +54,7 @@ class Sales extends CI_Controller
 		//$data['lowCSV'] = $lowCSV;
 		
 		
+		
 		//$data['low'] = $low->result();
 		$data['title'] = "Home Page";
 		$this->load->view('header',$data);
@@ -57,7 +62,8 @@ class Sales extends CI_Controller
 	}
 	
 	
-	function write_csv(){
+	function write_csv()
+	{
 		$data = $this->input->post('data');
 		$filename = $this->input->post('filename');
 		$path =  FCPATH."assets"."\\".$filename.".csv";
@@ -67,7 +73,8 @@ class Sales extends CI_Controller
 		
 	}
 	
-	function analysis(){
+	function analysis()
+	{
 		$data['title'] = "Analysis Page";
 		$this->load->model('Sales_model');
 		$this->load->helper('pdf_helper');
@@ -86,6 +93,8 @@ class Sales extends CI_Controller
 		$data['outstanding'] = $outstanding->num_rows();
 		$data['payment'] = $payment->num_rows();
 		$data['shipping'] = $shipping->num_rows();
+		
+		
 		
 		
 		$this->load->view('header',$data);
